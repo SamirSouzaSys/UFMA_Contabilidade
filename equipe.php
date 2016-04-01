@@ -39,12 +39,11 @@ include $head;
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Introdução</h1>
+                        <h1 class="page-header">Equipe</h1>
                         <div>
-                            <p>Neste trabalho vamos discorrer sobre tr&ecirc;s redu&ccedil;&otilde;es de valor de ativos, em virtude</p>
-                            <p>de desgaste pelo uso, a&ccedil;&atilde;o da natureza, supera&ccedil;&atilde;o tecnol&oacute;gica, exerc&iacute;cio de</p>
-                            <p>direitos, ou esgotamento de reservas minerais/ florestais. S&atilde;o elas a Deprecia&ccedil;&atilde;o, a</p>
-                            <p>Amortiza&ccedil;&atilde;o e a Exaust&atilde;o.</p>
+                            <p>Aristóteles Junior</p>
+                            <p>Laudelino Filho</p>
+                            <p>Samir Souza</p>
                         </div>
                     </div>
                     <!-- /.col-lg-12 -->
