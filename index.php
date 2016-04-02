@@ -1,19 +1,15 @@
 <?php
 require_once('config.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <?php
-
 include $head;
 ?>
 
 <body>
-
     <div id="wrapper">
-
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -58,17 +54,9 @@ include $head;
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="<?php echo $rootProject; ?>/bower_components/jquery/dist/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo $rootProject; ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="<?php echo $rootProject; ?>/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="<?php echo $rootProject; ?>/dist/js/sb-admin-2.js"></script>
+<?php
+include $footerScript;
+?>
 
 </body>
 

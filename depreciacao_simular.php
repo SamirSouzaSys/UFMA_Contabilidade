@@ -1,11 +1,10 @@
-<?php
+/<?php
 require_once('config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <?php
-
 include $head;
 ?>
 <body>
@@ -24,8 +23,7 @@ include $head;
             <!-- /.navbar-header -->
 
             <?php
-
-                include $templates;
+            include $templates;
             ?>
 
             <!-- /.navbar-static-side -->
@@ -37,93 +35,80 @@ include $head;
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">Depreciação</h1>
-                        <h3 class="page-header">Simular</h3>
+                        <h2 class="page-header">Simulações<br/><small>Linear</small> </h2>
                     </div>
                     <!-- /.col-lg-12 -->
+                    <form role="form">
+                        <div class="col-lg-12">
+                            <div id="chart_div">
+                            </div>
+                            <br/>
+                            <label><i class="fa fa-money"></i> Valor da depreciação mensal</label>
+                            <label class="control-label text-danger" id="depreMensal">-</label>
+                            <br/>
+                            <label><i class="fa fa-money "></i> Valor da depreciação anual</label>
+                            <label class="control-label text-danger" id="depreAnual">-</label>
+                            <br/><br/>
+                            <label>Meses</label>
+                            <select class="form-control" name="depreQtdMes">
+                                <?php
+                                for($mes = 1; $mes<=120;$mes++)
+                                    echo "<option>$mes</option>"
+                                ?>
+                            </select>
+                            <br/>
+                            <label>Valor Inicial</label>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon">R$</span>
+                                <input type="text" class="form-control" name="depreValorInicial">
+                            </div>
+                            <br/>
+                            <label>Valor Final</label>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon">R$</span>
+                                <input type="text" class="form-control" name="depreValorFinal">
+                            </div>
+                            <br/>
+                            <button id="depreSimuMensalCal" type="button" class="btn btn-success" onClick="depreciacao_simulacao_valor_final(this.form)">Calcular</button>
+                            <button type="reset" class="btn btn-danger">Limpar</button>
+                        </div>
+                    </form>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Morris.js Charts</h1>
+                        <h2 class="page-header">Simulações<br/><small>Linear</small> </h2>
                     </div>
                     <!-- /.col-lg-12 -->
+                    <form role="form">
+                        <div class="col-lg-12">
+                            <div id="chart_div">
+                            </div>
+                            <br/>
+                            <label>Meses</label>
+                            <select class="form-control" name="depreQtdMes">
+                                <?php
+                                for($mes = 1; $mes<=120;$mes++)
+                                    echo "<option>$mes</option>"
+                                ?>
+                            </select>
+                            <br/>
+                            <label>Valor Inicial</label>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon">R$</span>
+                                <input type="text" class="form-control" name="depreValorInicial">
+                            </div>
+                            <br/>
+                            <label>Depreciação ao Mês</label>
+                            <div class="form-group input-group">
+                                <input type="text" class="form-control" name="depreAoMes">
+                                <span class="input-group-addon">%</span>
+                            </div>
+                            <button id="depreSimuMensalCal" type="button" class="btn btn-success" onClick="depreciacao_simulacao_mensal(this.form)">Calcular</button>
+                            <button type="reset" class="btn btn-danger">Limpar</button>
+                            <br/>
+                        </div>
+                    </form>
                 </div>
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Area Chart Example
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div id="morris-area-chart"></div>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Bar Chart Example
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div id="morris-bar-chart"></div>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Line Chart Example
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div id="morris-line-chart"></div>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Donut Chart Example
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div id="morris-donut-chart"></div>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-6 -->
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Morris.js Usage
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <p>Morris.js is a jQuery based charting plugin created by Olly Smith. In SB Admin, we are using the most recent version of Morris.js which includes the resize function, which makes the charts fully responsive. The documentation for Morris.js is available on their website, <a target="_blank" href="http://morrisjs.github.io/morris.js/">http://morrisjs.github.io/morris.js/</a>.</p>
-                                <a target="_blank" class="btn btn-default btn-lg btn-block" href="http://morrisjs.github.io/morris.js/">View Morris.js Documentation</a>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-6 -->
-                </div>
-                <!-- /.row -->
-                <!-- /#page-wrapper -->
-                <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
         </div>
@@ -131,27 +116,8 @@ include $head;
 
     </div>
     <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="<?php echo $rootProject; ?>/bower_components/jquery/dist/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo $rootProject; ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="<?php echo $rootProject; ?>/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="<?php echo $rootProject; ?>/bower_components/raphael/raphael-min.js"></script>
-    <script src="<?php echo $rootProject; ?>/bower_components/morrisjs/morris.min.js"></script>
-    <script src="<?php echo $rootProject; ?>/js/morris-data.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="<?php echo $rootProject; ?>/dist/js/sb-admin-2.js"></script>
-
-</body>
-
+    <?php
+    include $footerScript;
+    ?>
+</body>""
 </html>
-
-
-

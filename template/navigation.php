@@ -3,10 +3,10 @@
   <div class="sidebar-nav navbar-collapse">
     <ul class="nav" id="side-menu">
       <li>
-        <a href="index.php"><i class="fa fa-unlock fa-fw"></i> Apresentação</a>
+        <a href="<?php echo $rootProject;?>/index.php"><i class="fa fa-unlock fa-fw"></i> Apresentação</a>
       </li>
       <li>
-        <a href="index.php"><i class="fa fa-sitemap fa-fw"></i> Depreciação<span class="fa arraow"></span></a>
+        <a href="<?php echo $rootProject;?>/#"><i class="fa fa-sitemap fa-fw"></i> Depreciação<span class="fa arraow"></span></a>
         <ul class="nav nav-second-level">
           <li>
             <a href="depreciacao_aprender.php"><i class="fa fa-pencil fa-fw"></i>O que é?</a>
@@ -17,7 +17,7 @@
         </ul>
       </li>
       <li>
-        <a href="index.php"><i class="fa fa-sitemap fa-fw"></i> Amortização<span class="fa arraow"></span></a>
+        <a href="<?php echo $rootProject;?>/#"><i class="fa fa-sitemap fa-fw"></i> Amortização<span class="fa arraow"></span></a>
         <ul class="nav nav-second-level">
           <li>
             <a href="amortizacao_aprender.php"><i class="fa fa-pencil fa-fw"></i>O que é?</a>
@@ -28,7 +28,7 @@
         </ul>
       </li>
       <li>
-        <a href="index.php"><i class="fa fa-sitemap fa-fw"></i> Exaustão<span class="fa arraow"></span></a>
+        <a href="<?php echo $rootProject;?>/#"><i class="fa fa-sitemap fa-fw"></i> Exaustão<span class="fa arraow"></span></a>
         <ul class="nav nav-second-level">
           <li>
             <a href="exaustao_aprender.php"><i class="fa fa-pencil fa-fw"></i>O que é?</a>
