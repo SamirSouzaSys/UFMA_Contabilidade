@@ -1,4 +1,4 @@
-/<?php
+<?php
 require_once('config.php');
 ?>
 <!DOCTYPE html>
@@ -39,7 +39,7 @@ include $head;
                     </div>
                     <!-- /.col-lg-12 -->
                     <form role="form">
-                        <div class="col-lg-12">
+                        <div class="col-xs-12 col-md-12">
                             <div id="chart_div">
                             </div>
                             <br/>
@@ -48,7 +48,9 @@ include $head;
                             <br/>
                             <label><i class="fa fa-money "></i> Valor da depreciação anual</label>
                             <label class="control-label text-danger" id="depreAnual">-</label>
-                            <br/><br/>
+                            <hr>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
                             <label>Meses</label>
                             <select class="form-control" name="depreQtdMes">
                                 <?php
@@ -56,68 +58,77 @@ include $head;
                                     echo "<option>$mes</option>"
                                 ?>
                             </select>
-                            <br/>
+                        </div>
+                        <div class="col-xs-6 col-md-4">
                             <label>Valor Inicial</label>
                             <div class="form-group input-group">
                                 <span class="input-group-addon">R$</span>
                                 <input type="text" class="form-control" name="depreValorInicial">
                             </div>
-                            <br/>
+                        </div>
+                        <div class="col-xs-6 col-md-4">
                             <label>Valor Final</label>
                             <div class="form-group input-group">
                                 <span class="input-group-addon">R$</span>
                                 <input type="text" class="form-control" name="depreValorFinal">
                             </div>
-                            <br/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
                             <button id="depreSimuMensalCal" type="button" class="btn btn-success" onClick="depreciacao_simulacao_valor_final(this.form)">Calcular</button>
                             <button type="reset" class="btn btn-danger">Limpar</button>
                         </div>
                     </form>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="page-header">Simulações<br/><small>Linear</small> </h2>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                    <form role="form">
-                        <div class="col-lg-12">
-                            <div id="chart_div">
-                            </div>
-                            <br/>
-                            <label>Meses</label>
-                            <select class="form-control" name="depreQtdMes">
-                                <?php
-                                for($mes = 1; $mes<=120;$mes++)
-                                    echo "<option>$mes</option>"
-                                ?>
-                            </select>
-                            <br/>
-                            <label>Valor Inicial</label>
-                            <div class="form-group input-group">
-                                <span class="input-group-addon">R$</span>
-                                <input type="text" class="form-control" name="depreValorInicial">
-                            </div>
-                            <br/>
-                            <label>Depreciação ao Mês</label>
-                            <div class="form-group input-group">
-                                <input type="text" class="form-control" name="depreAoMes">
-                                <span class="input-group-addon">%</span>
-                            </div>
-                            <button id="depreSimuMensalCal" type="button" class="btn btn-success" onClick="depreciacao_simulacao_mensal(this.form)">Calcular</button>
-                            <button type="reset" class="btn btn-danger">Limpar</button>
-                            <br/>
-                        </div>
-                    </form>
-                </div>
             </div>
-            <!-- /.container-fluid -->
-        </div>
-        <!-- /#page-wrapper -->
-
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="page-header">Simulações<br/><small>Linear</small> </h2>
+                </div>
+                <form role="form">
+                    <div class="col-lg-12">
+                        <div id="chart_div">
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <label>Meses</label>
+                        <select class="form-control" name="depreQtdMes">
+                            <?php
+                            for($mes = 1; $mes<=120;$mes++)
+                                echo "<option>$mes</option>"
+                            ?>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <label>Valor Inicial</label>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon">R$</span>
+                            <input type="text" class="form-control" name="depreValorInicial">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <label>Depreciação ao Mês</label>
+                        <div class="form-group input-group">
+                            <input type="text" class="form-control" name="depreAoMes">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <button id="depreSimuMensalCal" type="button" class="btn btn-success" onClick="depreciacao_simulacao_mensal(this.form)">Calcular</button>
+                        <button type="reset" class="btn btn-danger">Limpar</button>
+                    </div>
+                </form>
+            </div>
+        -->
     </div>
-    <!-- /#wrapper -->
-    <?php
-    include $footerScript;
-    ?>
-</body>""
+</div>
+<!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<?php
+include $footerScript;
+?>
+</body>
 </html>
