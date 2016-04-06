@@ -6,6 +6,9 @@
         <a href="<?php echo $rootProject;?>/index.php"><i class="fa fa-unlock fa-fw"></i> Apresentação</a>
       </li>
       <li>
+        <a href="<?php echo $rootProject;?>/introducao.php"><i class="fa fa-question-circle fa-fw"></i> Introdução</a>
+      </li>
+      <li>
         <a href="<?php echo $rootProject;?>/#"><i class="fa fa-sitemap fa-fw"></i> Depreciação<span class="fa arraow"></span></a>
         <ul class="nav nav-second-level">
           <li>
@@ -33,9 +36,9 @@
           <li>
             <a href="exaustao_aprender.php"><i class="fa fa-pencil fa-fw"></i>O que é?</a>
           </li>
-          <li>
+<!--           <li>
             <a href="exaustao_simular.php"><i class="fa fa-gamepad fa-fw"></i>Simular</a>
-          </li>
+          </li> -->
         </ul>
       </li>
       <li>

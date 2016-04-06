@@ -20,7 +20,7 @@ include $head;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Contabilidade - Computação UFMA 2015.1</a>
+                <a class="navbar-brand" href="<?php echo $rootProject;?>">Contabilidade - Computação UFMA 2015.2</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -52,83 +52,101 @@ include $head;
                             <div class="panel-body">
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-pills">
-                                    <li class="active"><a href="#1-pills" data-toggle="tab">1. Deprecia&ccedil;&atilde;o</a>
+                                    <li class="active"><a href="#1-pills" data-toggle="tab">Contabilização</a>
                                     </li>
-                                    <li><a href="#2-pills" data-toggle="tab">TABELA DE DEPRECIAÇÃO</a>
+                                    <li><a href="#2-pills" data-toggle="tab">Métodos de depreciação</a>
                                     </li>
-                                    <li><a href="#3-pills" data-toggle="tab">DIAGRAMA - CONTABILIZAÇÃO DA DEPRECIAÇÃO</a>
+                                    <li><a href="#3-pills" data-toggle="tab">Método da depreciação linear ou das quotas constantes</a>
                                     </li>
-                                    <li><a href="#4-pills" data-toggle="tab">OBJETIVO</a>
+                                    <li><a href="#4-pills" data-toggle="tab">Método de depreciação da soma dos dígitos (cole)</a>
+                                    </li>
+                                    <li><a href="#5-pills" data-toggle="tab">Método da unidade de tempo trabalhada ou das quantidades produzidas</a>
+                                    </li>
+                                    <li><a href="#6-pills" data-toggle="tab">Depreciação em atividade rural</a>
                                     </li>
                                 </ul>
-
+                                <hr>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div class="tab-pane fade in active" id="1-pills">
-                                        <h4>Depreciação</h4>
-                                        <p>&Eacute; o encargo peri&oacute;dico que alguns bens sofrem por uso, obsolesc&ecirc;ncia ou
-                                        desgaste natural. A taxa anual de deprecia&ccedil;&atilde;o de um bem &eacute; dada em fun&ccedil;&atilde;o do
-                                        prazo durante o qual se pode esperar alguma utiliza&ccedil;&atilde;o econ&ocirc;mica do bem. A
-                                        porcentagem de deprecia&ccedil;&atilde;o a ser registrada na contabilidade, como custo ou
-                                        despesa operacional, &eacute; determinada pela aplica&ccedil;&atilde;o da taxa de deprecia&ccedil;&atilde;o sobre o
-                                        valor do bem em reais. &Eacute; bom observar que o limite de deprecia&ccedil;&atilde;o &eacute; o valor do
-                                        pr&oacute;prio bem, de modo que deve&shy;se manter um controle individualizado, por bem,
-                                        para que o valor contabilizado da deprecia&ccedil;&atilde;o, somado &agrave;s porcentagens j&aacute;
-                                        registradas anteriormente, n&atilde;o ultrapasse o valor do respectivo bem. Ela pode ser
-                                        calculada mensalmente ou no final do ano, por ocasi&atilde;o da Apura&ccedil;&atilde;o do Resultado
-                                        do Exerc&iacute;cio (ARE).</p>
-
-                                        <p>A deprecia&ccedil;&atilde;o de um ativo come&ccedil;a quando o item est&aacute; em condi&ccedil;&otilde;es de
-                                        operar na forma pretendida pela administra&ccedil;&atilde;o, e acaba quando o ativo &eacute; baixado
-                                        ou transferido do imobilizado. A deprecia&ccedil;&atilde;o n&atilde;o cessa quando o ativo torna&shy;se
-                                        obsoleto ou &eacute; retirado temporariamente de opera&ccedil;&atilde;o a n&atilde;o ser que o ativo esteja
-                                        totalmente depreciado.
-                                        A legisla&ccedil;&atilde;o do imposto de renda (RIR 3000/99) fixa limites m&aacute;ximos de
-                                        deprecia&ccedil;&atilde;o para os bens, em fun&ccedil;&atilde;o do per&iacute;odo de vida &uacute;til do bem:</p>
+                                        <h4>Contabilização</h4>
+                                        <p>O lançamento mais comum do fato relativo à depreciação é o seguinte:</p>
+                                        <p>D - Despesa (ou custo) de depreciação</p>
+                                        <p>C - a Depreciação acumulada</p>
+                                        <p>A conta devedora, despesa de depreciação, é conta de resultado e representa o encargo econômico suportado pela entidade, chamada também de encargo de depreciação.</p>
+                                        <p>A conta credora depreciação acumulada é retificadora do bem sujeito à depreciação, possuindo saldo credor. Integra o balanço patrimonial, sendo demonstrada juntamente com a conta do bem que retifica, em subtração a seu saldo, chegando-se ao valor contábil (diferença entre o valor pelo qual o bem está registrado no balanço e a sua depreciação acumulada).</p>
+                                        <p>A depreciação será deduzida, para fins do Imposto de Renda, pela empresa que suporta o encargo econômico do desgaste ou obsolescência, de acordo com as condições de propriedade, posse ou uso do bem.</p>
+                                        <p>Para fins da legislação fiscal (Imposto de Renda), o encargo de depreciação somente poderá ser computado no resultado do exercício a partir do mês em que o bem for efetivamente instalado, posto em serviço ou em condições de produção. Porém, aos olhos da contabilidade, ele deve ser depreciado a partir do mês de aquisição, pois, pelo próprio conceito de depreciação, é desde esse momento que começa a obsolescência e desvalorização pela ação da natureza.</p>
+                                        <p>A taxa de depreciação é determinada em função do período de vida útil do bem. Assim, um bem com 5 (cinco) anos de vida útil deverá ser depreciado em 20% ao ano.</p>
+                                        <p>Alguns bens não estão sujeitos à depreciação. Eis alguns: terrenos, bens que normalmente aumentam de valor com o tempo, prédios ou construções não-alugados etc.</p>
                                     </div>
                                     <div class="tab-pane fade" id="2-pills">
-                                        <h4>Tabela de depreciação</h4>
-                                        <table class="table table-striped">
-                                            <tr>
-                                                <td>Bens Patrimoniais</td>
-                                                <td>Taxa Anual</td>
-                                                <td>Anos de Vida &Uacute;til</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Edif&iacute;cios                  </td><td> 4%</td><td>25</td>
-                                            </tr>
-                                            <tr>
-                                                <td>M&aacute;quinas e Equipamentos    </td><td>10%</td><td>10</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Instala&ccedil;&otilde;es         </td><td>10%</td><td>10</td>
-                                            </tr>
-                                            <tr>
-                                                <td>M&oacute;veis e Utens&iacute;lios </td><td>10%</td><td>10</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ve&iacute;culos                   </td><td>20%</td><td>5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Computadores e Perif&eacute;ricos </td><td>20%</td><td>5</td>
-                                            </tr>
-                                        </table>
+                                        <h4>Métodos de depreciação</h4>
+                                        <p>Existem diversos métodos de depreciação, sendo que o mais largamente utilizado é o método da depreciação linear.</p>
                                     </div>
                                     <div class="tab-pane fade" id="3-pills">
-                                        <p>O registro de contabilidade do encargo de deprecia&ccedil;&atilde;o &eacute; feito com o d&eacute;bito
-                                        de uma conta de custo ou despesa operacional e cr&eacute;dito da conta redutora do ativo
-                                        imobilizado intitulada deprecia&ccedil;&atilde;o acumulada.
-                                        D. Despesa com Deprecia&ccedil;&atilde;o
-                                        C. Deprecia&ccedil;&atilde;o Acumulada</p>
+                                        <h4>Método da depreciação linear ou das quotas constantes</h4>
+                                        <p>Consiste em aplicar-se a taxa de depreciação sempre sobre o mesmo valor (taxa e base de cálculo fixas). Dessa forma, o valor do encargo de depreciação será o mesmo em todos os períodos.</p>
                                     </div>
                                     <div class="tab-pane fade" id="4-pills">
-                                        <p>Ao longo do tempo, com a obsolesc&ecirc;ncia natural ou desgaste com uso na
-                                        produ&ccedil;&atilde;o, os ativos v&atilde;o perdendo valor, essa perda de valor &eacute; apropriada pela
-                                        contabilidade periodicamente at&eacute; que esse ativo tenha valor reduzido a zero. Com
-                                        os valores da deprecia&ccedil;&atilde;o acumulada, &eacute; poss&iacute;vel criar uma previs&atilde;o de deprecia&ccedil;&atilde;o
-                                        do bem para posterior troca ou manuten&ccedil;&atilde;o do mesmo.</p>
+                                        <h4>Método de depreciação da soma dos dígitos (cole)</h4>
+                                        <p>Este método consiste em somar os dígitos da vida útil do bem. O valor assim encontrado será o numerador ou denominador, conforme se está trabalhando com quotas crescentes ou decrescentes. É um método em que a taxa é variável, mas a base de cálculo é constante.</p>
+                                        <p>Por outro lado, o outro elemento (numerador ou denominador) será o dígito do ano a que nos estamos referindo. Por exemplo, para um bem que será depreciado em 5 anos, sem valor residual, utilizando o método crescente, sendo o seu valor de R$ 30.000,00, teremos o seguinte esquema:</p>
+                                        <p>
+                                            Ano 1 1
+                                        </p>
+                                        <p>
+                                            Ano 2 2
+                                        </p>
+                                        <p>
+                                            Ano 3 3
+                                        </p>
+                                        <p>
+                                            Ano 4 4
+                                        </p>
+                                        <p>
+                                            Ano 5 5
+                                        </p>
+                                        <p>
+                                            Soma = 15
+                                        </p>
+                                        <br>
+                                        <p>
+                                            Como a depreciação é crescente, será ela então de:
+                                        </p>
+                                        <p>
+                                            1º ano (1/15 x R$ 30.000,00) = R$ 2.000,00
+                                        </p>
+                                        <p>
+                                            2º ano (2/15 x R$ 30.000,00) = R$ 4.000,00
+                                        </p>
+                                        <p>
+                                            3º ano (3/15 x R$ 30.000,00) = R$ 6.000,00
+                                        </p>
+                                        <p>
+                                            4º ano (4/15 x R$ 30.000,00) = R$ 8.000,00
+                                        </p>
+                                        <p>
+                                            5º ano (5/15 x R$ 30.000,00) = R$ 10.000,00
+                                        </p>
+                                        <p>
+                                            Dessa forma, o valor contábil desse bem, ao fim do terceiro ano, será de R$ 18.000,00 (R$ 30.000,00 – R$ 12.000,00).
+                                        </p>
+                                        <p>
+                                            Caso a depreciação fosse decrescente, os valores por ano seriam invertidos, isto é, teríamos R$ 10.000,00 de depreciação no 1º ano, R$ 8.000,00 no 2º e assim por diante.
+                                        </p>
                                     </div>
-
+                                    <div class="tab-pane fade" id="5-pills">
+                                        <h4>Método da unidade de tempo trabalhada ou das quantidades produzidas</h4>
+                                        <p>Nesse método, a taxa de depreciação é calculada em função do número de horas de uso do bem no período. Neste caso, basta dividir o valor do bem pelo número de horas de vida útil e obteremos a depreciação por hora.
+                                        </p>
+                                        <p>O método das unidades produzidas é análogo, porém o cálculo da taxa é feito dividindo-se as unidades produzidas no período pela quantidade total que aquele bem é capaz de produzir, ou seja, a vida útil é dada em termos de unidades a serem produzidas.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="6-pills">
+                                        <h4>Depreciação em atividade rural</h4>
+                                        <p>Consoante o disposto no art. 6º da MP 2.159-70/01, os bens do ativo permanente imobilizado, exceto a terra nua, adquiridos por pessoa jurídica que explore atividade rural, para uso nesta atividade, poderão ser depreciados integralmente no próprio ano de aquisição.</p>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /.panel-body -->
@@ -144,13 +162,9 @@ include $head;
     </div>
     <!-- /#wrapper -->
 
-<?php
-include $footerScript;
-?>
+    <?php
+    include $footerScript;
+    ?>
 
 </body>
-
 </html>
-
-
-

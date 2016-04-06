@@ -1,7 +1,7 @@
 <?php
-// $rootProject = "/ufma/UFMA_Contabilidade";
+$rootProject = "/ufma/UFMA_Contabilidade_Portal_20152";
 // $rootProject = "";
-$rootProject = "/sam/UFMA_Contabilidade_Portal_20152";
+// $rootProject = "/sam/UFMA_Contabilidade_Portal_20152";
 
 $templates = "template/navigation.php";
 $head = "template/head.php";

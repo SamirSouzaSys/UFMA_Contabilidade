@@ -20,7 +20,7 @@ include $head;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Contabilidade - Computação UFMA 2015.1</a>
+                <a class="navbar-brand" href="<?php echo $rootProject;?>">Contabilidade - Computação UFMA 2015.2</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -54,40 +54,53 @@ include $head;
                                 <ul class="nav nav-pills">
                                     <li class="active"><a href="#1-pills" data-toggle="tab">Introdução</a>
                                     </li>
-                                    <li><a href="#2-pills" data-toggle="tab">EXAUSTÃO DE RECURSOS MINERAIS</a>
+                                    <li><a href="#2-pills" data-toggle="tab">Contabilização</a>
                                     </li>
-                                    <li><a href="#3-pills" data-toggle="tab">LIMITE</a>
+                                    <li><a href="#3-pills" data-toggle="tab">Taxas Anuais</a>
                                     </li>
-                                    <li><a href="#4-pills" data-toggle="tab">DETERMINAÇÃO DA QUOTA ANUAL</a>
-                                    </li>
-                                    <li><a href="#5-pills" data-toggle="tab">CÁLCULO DA EXAUSTÃO REAL</a>
+                                    <li><a href="#4-pills" data-toggle="tab">Ganhos Ou Perdas De Capital</a>
                                     </li>
                                 </ul>
-
+                                <hr>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div class="tab-pane fade in active" id="1-pills">
-                                        <p>É a redução do valor, decorrente da exploração, dos recursos minerais, florestais e outros recursos naturais esgotáveis, reduzindo o valor de investimentos necessários à exploração de recursos minerais ou florestais.</p>
-                                        <p>A medida que os recursos minerais vão se exaurindo, registra-se na contabilidade, simetricamente à possança conhecida da jazida, a quota de exaustão.</p>
-                                        <p>Tratando-se de floresta natural, a quota de exaustão será determinada mediante relação percentual entre os recursos florestais extraídos no período e o volume dos recursos florestais existentes no início do mesmo período.</p>
+                                        <h4>Introdução</h4>
+                                        <p>Corresponde à perda de valor, decorrente da exploração de recursos minerais ou florestais ou de bens aplicados nessa exploração. É o reconhecimento do custo dos recursos naturais, durante o período em que tais recursos são exauridos ou extraídos.
+                                        </p>
+                                        <p>
+                                            Os equipamentos de extração mineral ou florestal podem opcionalmente ser depreciados, utilizando-se, para tal, os critérios e taxas de depreciação. Porém, normalmente devem ser exauridos juntamente com o objeto de exploração.
+                                        </p>
                                     </div>
                                     <div class="tab-pane fade" id="2-pills">
-                                        <p>A diminuição de recursos minerais resultante da sua exploração deverá ser computada como custo ou encargo. </p>
-                                        <p>A sistemática para a determinação da quota anual de exaustão é semelhante àquela aplicada no cálculo do encargo anual de depreciação.</p>
-                                        <p>A base de cálculo da quota anual de exaustão é o custo de aquisição dos recursos minerais explorados.</p>
+                                        <h4>Contabilização</h4>
+                                        <p>
+                                            D - Despesa de exaustão
+                                        </p>
+                                        <p>
+                                            C - a Exaustão acumulada
+                                        </pz>
                                     </div>
                                     <div class="tab-pane fade" id="3-pills">
-                                        <p>A depreciação, amortização e exaustão devem ser reconhecidas até que o valor residual do ativo seja igual ao seu valor contábil (NBC 19.5.4.4).</p>
+                                        <h4>Taxas Anuais</h4>
+                                        <p>
+                                            Serão determinadas em função do:
+                                        </p>
+                                        <p>
+                                            a) Volume de produção no período e sua relação com a poupança (reserva potencial de exploração) conhecida. É o método das unidades produzidas;
+                                        </p>
+                                        <p>
+                                            b) Prazo de concessão dado pela autoridade governamental, quando for o caso (exploração de recursos minerais).
+                                        </p>
                                     </div>
                                     <div class="tab-pane fade" id="4-pills">
-                                        <p>O montante anual da quota de exaustão será determinado com base no volume da produção do ano e sua relação com a possança conhecida da mina, ou em função do prazo de concessão para sua exploração.</p>
-                                        <p>Existem, portanto, dois critérios para o cálculo da quota de exaustão de recursos minerais, a saber:</p>
-                                        <p>1) com base na relação existente entre a extração efetuada no respectivo período de apuração com a possança conhecida da mina (quantidade estimada de minérios da jazida);</p>
-                                        <p>2) com base no prazo de concessão para exploração da jazida. O critério a ser observado será aquele que proporcionar maior percentual de exaustão no período. </p>
-                                    </div>
-                                    <div class="tab-pane fade" id="5-pills">
-                                        <p>O critério adotado na determinação da quota anual de exaustão é o mesmo aplicado no cálculo da quota de depreciação.</p>
-                                        <p>Desta forma, a medida que os recursos minerais vão se exaurindo, registra-se na contabilidade, simetricamente à possança conhecida da jazida, a quota de exaustão.</p>
+                                        <h4>Ganhos Ou Perdas De Capital</h4>
+                                        <p> Serão classificados como ganhos ou perdas de capital os resultados na alienação e liquidação de bens do ativo permanente, inclusive por desapropriação, baixa por perecimento, extinção, desgaste, obsolescência ou exaustão. Estes ganhos ou perdas serão contabilizados, respectivamente, como receita não operacional e despesa não operacional.
+                                        </p>
+                                        <p> A determinação do ganho ou da perda de capital corresponderá à diferença entre o valor de alienação dos bens e o seu valor contábil, na data da baixa. Ocorrerá ganho, se a diferença for positiva e perda, se negativa. Entende-se por valor contábil dos bens o que estiver registrado na escrituração, corrigido monetariamente, ajustado para mais por reavaliação no valor desses ativos ou para menos por contas retificadoras, tais como depreciação, amortização, exaustão, provisão. Assim:
+                                        </p>
+                                        <p>Valor de aquisição do bem (+) Correção monetária (+) Ajuste para reavaliação (-) Provisões (-) Depreciação, amortização ou exaustão acumulada = Valor contábil do bem
+                                        </p>
                                     </div>
                                 </div>
                             </div>
